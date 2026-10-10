@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Jabez Store: vintage finds. Shop our latest items on Facebook.">
+<title>Jabez Store</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Karla:wght@400;600;700&family=Courier+Prime&display=swap">
+<style>
+/* Layout: one centered column — a shop sign, then a hang tag carrying the QR, then how to buy */
+:root{
+  --bg:#efe9dc; --card:#fbf8f1; --fg:#24302a; --muted:#5d6a62;
+  --accent:#2f5d46; --gold:#b8862b; --line:#d6ccb8; --on-accent:#fbf8f1;
+  --display:"Abril Fatface", Georgia, "Times New Roman", serif;
+  --body:"Karla", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --mono:"Courier Prime", "Courier New", monospace;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --bg:#18201b; --card:#222c26; --fg:#ece6d8; --muted:#a6b0a8;
+  --accent:#7fb898; --gold:#d9a94e; --line:#35423a; --on-accent:#15201a; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#18201b; --card:#222c26; --fg:#ece6d8; --muted:#a6b0a8;
+  --accent:#7fb898; --gold:#d9a94e; --line:#35423a; --on-accent:#15201a; color-scheme:dark}
+body{background:var(--bg);color:var(--fg);font-family:var(--body);font-size:17px;line-height:1.6}
+.wrap{max-width:560px;margin:0 auto;padding-inline:20px;padding-block:56px 40px;display:flex;flex-direction:column;align-items:center;gap:36px;text-align:center}
+.sign{display:flex;flex-direction:column;align-items:center;gap:10px}
+.est{font-family:var(--mono);font-size:13px;letter-spacing:.18em;text-transform:uppercase;color:var(--gold);display:flex;align-items:center;gap:12px}
+.est::before,.est::after{content:"";width:34px;height:1px;background:var(--gold)}
+h1{font-family:var(--display);font-weight:400;font-size:clamp(52px,14vw,84px);line-height:1;margin:0;color:var(--accent);text-wrap:balance}
+.tagline{margin:0;font-size:19px;color:var(--muted);max-width:30ch;text-wrap:balance}
+.btn{display:inline-flex;align-items:center;gap:10px;background:var(--accent);color:var(--on-accent);text-decoration:none;font-weight:700;font-size:18px;padding:14px 28px;border-radius:999px;transition:transform .15s}
+.btn:hover{transform:translateY(-2px)}
+.btn:focus-visible{outline:3px solid var(--gold);outline-offset:3px}
+.btn svg{width:20px;height:20px;fill:currentColor}
+/* hang tag */
+.tag{position:relative;background:var(--card);border:1px solid var(--line);border-radius:10px 10px 10px 10px;padding:44px 28px 24px;width:min(100%,290px);box-shadow:0 10px 30px -18px rgba(0,0,0,.45);transform:rotate(-2deg)}
+.tag::before{content:"";position:absolute;top:16px;left:50%;width:14px;height:14px;margin-left:-7px;border-radius:50%;background:var(--bg);border:2px solid var(--line)}
+.tag img{display:block;width:100%;max-width:220px;margin:0 auto;border-radius:4px;image-rendering:pixelated}
+.tag p{margin:14px 0 0;font-family:var(--mono);font-size:14px;color:var(--muted)}
+.how{width:100%;border-top:1px dashed var(--line);padding-top:28px;display:flex;flex-direction:column;gap:8px}
+.how h2{font-family:var(--display);font-weight:400;font-size:28px;margin:0;color:var(--fg)}
+.how ol{margin:0;padding:0;list-style:none;display:flex;flex-direction:column;gap:6px;color:var(--muted)}
+footer{font-family:var(--mono);font-size:13px;color:var(--muted)}
+@media (prefers-reduced-motion:reduce){.btn{transition:none}.tag{transform:none}}
+</style>
+</head>
+<body>
+
+<main class="wrap">
+  <header class="sign">
+    <div class="est">Vintage finds</div>
+    <h1>Jabez Store</h1>
+    <p class="tagline">Old things with good stories, looking for a new home.</p>
+  </header>
+
+  <a class="btn" href="https://www.facebook.com/Jabezstore" target="_blank" rel="noopener">
+    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M13.5 22v-8h2.7l.4-3.2h-3.1V8.8c0-.9.3-1.5 1.6-1.5h1.7V4.4c-.3 0-1.3-.1-2.4-.1-2.4 0-4 1.5-4 4.1v2.4H7.7V14h2.7v8h3.1z"/></svg>
+    Shop on Facebook
+  </a>
+
+  <div class="tag">
+    <img src="data:image/png;base64,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" alt="QR code linking to facebook.com/Jabezstore">
+    <p>Scan to visit the shop</p>
+  </div>
+
+  <section class="how">
+    <h2>How to buy</h2>
+    <ol>
+      <li>Browse our latest items on the Facebook page.</li>
+      <li>See something you like? Send us a message there.</li>
+      <li>We'll answer your questions and work out the details.</li>
+    </ol>
+  </section>
+
+  <footer>facebook.com/Jabezstore</footer>
+</main>
+</body>
+</html>
